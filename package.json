@@ -2,7 +2,7 @@
   "name": "proshop-ecommerce-app",
   "version": "1.0.0",
   "description": "",
-  "main": "seeder.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server",
