@@ -8,6 +8,8 @@ import { errorHandler, notFoound } from "./middleware/errorHandler.js";
 import path from "path";
 import config from "config";
 
+const paypalConfigId = config.get("PAYPAL_CLIENT_ID");
+
 dotenv.config();
 
 connectDB();
@@ -19,9 +21,7 @@ app.use(express.json());
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
-app.get("/api/config/paypal", (req, res) =>
-  res.send(config.get("PAYPAL_CLIENT_ID"))
-);
+app.get("/api/config/paypal", (req, res) => res.send(paypalConfigId));
 
 app.use(notFoound);
 app.use(errorHandler);
