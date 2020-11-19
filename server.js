@@ -6,6 +6,7 @@ import userRoutes from "./routes/userRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import { errorHandler, notFoound } from "./middleware/errorHandler.js";
 import path from "path";
+import config from "config";
 
 dotenv.config();
 
@@ -19,7 +20,7 @@ app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.get("/api/config/paypal", (req, res) =>
-  res.send(process.env.PAYPAL_CLIENT_ID)
+  res.send(config.get("PAYPAL_CLIENT_ID"))
 );
 
 app.use(notFoound);

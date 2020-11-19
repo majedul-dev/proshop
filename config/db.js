@@ -1,8 +1,11 @@
 import mongoose from "mongoose";
+import config from "config";
+
+const db = config.get("mongoURI");
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
+    const conn = await mongoose.connect(db, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
       useCreateIndex: true,

@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb://majed:majed@cluster0-shard-00-00.rfloa.mongodb.net:27017,cluster0-shard-00-01.rfloa.mongodb.net:27017,cluster0-shard-00-02.rfloa.mongodb.net:27017/proshop?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "JWT_SECRET": "jsonwebtokensecret",
+    "PAYPAL_CLIENT_ID": "Adon44tKQR3m859oQj-b1jYHsFNgCVpjB3_4qPqYw12uwmTE111mcuE1u5CzUHPh1TKxzJ5Dns2dA04H"
+}
+  
