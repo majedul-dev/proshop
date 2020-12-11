@@ -52,11 +52,13 @@ const OrderDeliverScreen = ({ match }) => {
                 {order.shippingAddress.country}
               </p>
               <p>
-                <strong>Name: {order.user.name}</strong>
+                <strong>Name: {order.user && order.user.name}</strong>
               </p>
               <p>
                 <strong>Email: </strong>
-                <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
+                <a href={`mailto:${order.user && order.user.email}`}>
+                  {order.user && order.user.email}
+                </a>
               </p>
               {order.isDelivered ? (
                 <Message variant='success'>
